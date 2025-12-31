@@ -1,0 +1,3 @@
+{
+    "exclude": ["output", "log", "debugging", "experiments"]
+}
