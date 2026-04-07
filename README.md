@@ -37,7 +37,7 @@ python tools/train.py --cfg experiments/crowdpose/w32/w_32_train_event_subteache
 
 python tools/train.py --cfg experiments/crowdpose/w32/w_32_train_blur2blur_subteacher.yaml
 
-python tools/train_step1 --cfg experiments/crowdpose/w32/w_32_train_step1_blur2blur_subteacher.yaml
+python tools/train_step1.py --cfg experiments/crowdpose/w32/w_32_train_step1_blur2blur_subteacher.yaml
 ```
 
 #### Test / Validation
@@ -47,7 +47,7 @@ python tools/valid_step1.py --cfg experiments/crowdpose/w32/w_32_test_event_subt
 
 python tools/valid_step1.py --cfg experiments/crowdpose/w32/w_32_test_blur2blur_subteacher.yaml
 
-python tools/valid_step1 --cfg experiments/crowdpose/w32/w_32_test_step1_blur2blur_subteacher.yaml
+python tools/valid_step1.py --cfg experiments/crowdpose/w32/w_32_test_step1_blur2blur_subteacher.yaml
 ```
 
 ### Stage 2
