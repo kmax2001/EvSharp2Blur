@@ -11,7 +11,7 @@
 ### 1. Clone Repository
 
 ```bash
-git clone --recursive <REPOSITORY_URL>
+git clone --recursive https://github.com/kmax2001/EvSharp2Blur.git
 cd FromS2B
 ```
 
