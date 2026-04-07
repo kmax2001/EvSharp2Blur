@@ -1,6 +1,10 @@
 # FromS2B
 
-TODO: Add a short project description here.
+## TODO
+
+- [ ] Upload a training/test datasets and checkpoints.
+- [ ] Upload data preprocessing details.
+
 
 ## Environment Setup
 
@@ -11,8 +15,6 @@ git clone --recursive <REPOSITORY_URL>
 cd FromS2B
 ```
 
-TODO: Replace `<REPOSITORY_URL>` with the actual repository URL.
-
 ### 2. Create Environment
 
 ```bash
@@ -22,102 +24,70 @@ pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f htt
 pip install -r requirements.txt
 ```
 
-TODO: Adjust the Python version if needed.
-TODO: Add extra installation steps if there are system packages, CUDA, or compiler requirements.
-
 ### 3. Prepare Datasets / External Resources
 
-TODO: Describe required datasets.
-TODO: Explain where to place each dataset.
-TODO: Add instructions for downloading checkpoints or pretrained models if needed.
-TODO: Add any preprocessing dependency setup steps.
-
 ## Train / Test by Stage
-
-This project appears to use multiple training and validation stages. Fill in the details for each stage below.
 
 ### Stage 1
 
 #### Train
 
 ```bash
-python tools/train_step1.py
-```
+python tools/train.py --cfg experiments/crowdpose/w32/w_32_train_event_subteacher.yaml
 
-TODO: Add the exact training command, config, and required arguments.
-TODO: Explain input data and output checkpoints.
+python tools/train.py --cfg experiments/crowdpose/w32/w_32_train_blur2blur_subteacher.yaml
+
+python tools/train_step1 --cfg experiments/crowdpose/w32/w_32_train_step1_blur2blur_subteacher.yaml
+```
 
 #### Test / Validation
 
 ```bash
-python tools/valid_step1.py
-```
+python tools/valid_step1.py --cfg experiments/crowdpose/w32/w_32_test_event_subteacher.yaml
 
-TODO: Add the exact evaluation command and expected outputs.
+python tools/valid_step1.py --cfg experiments/crowdpose/w32/w_32_test_blur2blur_subteacher.yaml
+
+python tools/valid_step1 --cfg experiments/crowdpose/w32/w_32_test_step1_blur2blur_subteacher.yaml
+```
 
 ### Stage 2
 
 #### Train
 
 ```bash
-python tools/train_step2.py
+python tools/train_step2.py --cfg experiments/crowdpose/w32/w_32_train_step2.yaml
 ```
-
-TODO: Add the exact training command, config, and required arguments.
-TODO: Explain dependencies on Stage 1 outputs.
 
 #### Test / Validation
 
 ```bash
-# TODO: add stage 2 validation command
+python tools/valid_step2.py --cfg experiments/crowdpose/w32/w_32_test_step2.yaml
 ```
-
-TODO: Add the exact evaluation command and expected outputs.
 
 ### Stage 3
 
 #### Train
 
 ```bash
-python tools/train_step3.py
+python tools/train_step3.py --cfg experiments/crowdpose/w32/w_32_train_step3.yaml
 ```
-
-TODO: Add the exact training command, config, and required arguments.
-TODO: Explain dependencies on previous stage outputs.
 
 #### Test / Validation
 
 ```bash
-python tools/valid_step3.py
+python tools/valid_step3.py --cfg experiments/crowdpose/w32/w_32_test_step3.yaml
 ```
-
-TODO: Add the exact evaluation command and expected outputs.
 
 ### Stage 4
 
 #### Train
 
 ```bash
-python tools/train_step4.py
+python tools/train_step4.py --cfg experiments/crowdpose/w32/w_32_train_step4.yaml
 ```
-
-TODO: Add the exact training command, config, and required arguments.
-TODO: Explain dependencies on previous stage outputs.
 
 #### Test / Validation
 
 ```bash
-python tools/valid_step4.py
+python tools/valid_step4.py --cfg experiments/crowdpose/w32/w_32_test_step4.yaml
 ```
-
-TODO: Add the exact evaluation command and expected outputs.
-
-## Additional Scripts
-
-## Results
-
-TODO: Add benchmark tables, qualitative results, or example outputs.
-
-## Acknowledgements
-
-TODO: Mention external repositories, datasets, or codebases used in this project.
