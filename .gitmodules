@@ -1,0 +1,12 @@
+[submodule "CrowdPose"]
+	path = CrowdPose
+	url = https://github.com/jeffffffli/CrowdPose.git
+[submodule "cocoapi/cocoapi"]
+	path = cocoapi/cocoapi
+	url = https://github.com/cocodataset/cocoapi.git
+[submodule "preprocessing/Blur2Blur"]
+	path = preprocessing/Blur2Blur
+	url = https://github.com/VinAIResearch/Blur2Blur.git
+[submodule "preprocessing/ssl_e2vid"]
+	path = preprocessing/ssl_e2vid
+	url = https://github.com/tudelft/ssl_e2vid.git
