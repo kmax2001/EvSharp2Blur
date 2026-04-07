@@ -114,38 +114,6 @@ TODO: Add the exact evaluation command and expected outputs.
 
 ## Additional Scripts
 
-### ScoreNet
-
-```bash
-python tools/train_scorenet.py
-```
-
-TODO: Explain when this should be run and how it relates to the main stages.
-
-### Generic Training / Validation Entry Points
-
-```bash
-python tools/train.py
-python tools/valid.py
-```
-
-TODO: Explain whether these are legacy scripts, shared entry points, or the recommended interface.
-
-## Experiments / Configs
-
-- `experiments/coco/`
-- `experiments/crowdpose/`
-
-TODO: Explain which config files correspond to which stage or dataset.
-
-## Preprocessing
-
-- `preprocessing/Blur2Blur/`
-- `preprocessing/ssl_e2vid/`
-
-TODO: Describe whether these preprocessing modules are required or optional.
-TODO: Add usage instructions if users must run preprocessing before training.
-
 ## Results
 
 TODO: Add benchmark tables, qualitative results, or example outputs.
